@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Taxi</title>
+     <link rel="stylesheet" href="css/style.css">
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+     <header class="header">
+          <section class="flex">
+               <a href="delete-account.html" class="logo">Служба Такси</a>
+               <nav class="navbar">
+                    <ul>
+                         <li><a href="index.html">Главный</a></li>
+                         <li><a href="politics.html">Политика</a></li>
+                         <li><a href="#" class="delete-account">Удалить аккаунт</a>
+                              <div class="delete-person">
+                                   <a href="delete-account.html">Удаление аккаунта клиента.</a>
+                                   <a href="delete-account-driver.html">Удаление аккаунта водитель.</a>
+                              </div>
+                         </li>
+                    </ul>
+               </nav>
+               <div id="menu" class='bx bx-menu-alt-right'></div>
+          </section>
+          <div class="sidebar">
+               <a href="index.html" class="logo">Служба Такси</a>
+               <nav class="navbar">
+                    <ul>
+                         <li><a href="index.html">Главный</a></li>
+                         <li><a href="politics.html">Политика</a></li>
+                         <li><a href="delete-account.html" class="delete-account">Удалить аккаунт</a></li>
+                    </ul>
+                    <div class="social">
+                         <a href=""><i class='bx bxl-facebook' ></i></a>
+                         <a href="https://www.instagram.com/ecotaxi_bukhara?igsh=MTFqcGh1amg1cGV3OA=="><i class='bx bxl-instagram-alt'></i></a>
+                         <a href=""><i class='bx bxl-telegram'></i></a>
+                    </div>
+               </nav>
+          </div>
+     </header>
+
+     <main class="delete-account">
+          <section class="content">
+               <h3>Удаление аккаунта в приложении </h3>
+               <p>1. Зайдите в Меню</p>
+               <p>2. Из Меню зайдите в Профиль</p>
+               <p>3. Долистайте Профиль до самого конца страницы, внизу Вы увидите кнопку «Удалить аккаунт»</p>
+               <p>4. При нажатии на кнопку «Удалить аккаунт» будут удалены Ваш номер телефона, имя, аватар, банковские карты, история поездок и настройки приложения</p>
+               <img src="img/delete-account.png" alt="">
+          </section>
+     </main>
+
+      <footer class="footer">
+          <section class="content">
+               <h1>Оставить контактную информацию</h1>
+               <p>Мы свяжемся с вами и ответим на все вопросы по услуге.</p>
+               <form class="input-flex" id="forma">
+                    <div class="input">
+                         <input type="text" placeholder="Ф.И.О" id="nick" required>
+                    </div>
+                    <div class="input">
+                         <input type="text" class="input" required id="telp"
+                      pattern="\+\d{3}-\d{2}-\d{3}-\d{2}-\d{2}"
+                      placeholder="+998-91-044-15-41"> 
+                    </div>
+                    <button class="button" onclick="submitForma()">Oтправить</button>
+               </form>
+               <div class="row">
+                    <div class="left">
+                         <a href="politika-rus.html">Политика конфиденциальности</a>
+                    </div>
+                    <div class="right">
+                         <div class="social">
+                              <a href=""><i class='bx bxl-facebook' ></i></a>
+                              <a href=""><i class='bx bxl-instagram-alt'></i></a>
+                              <a href=""><i class='bx bxl-telegram'></i></a>
+                         </div>
+                         <a href="https://teamwork.uz" target="_blank">Cоздано компанией Teamwork.uz</a>
+                    </div>
+               </div>
+          </section>
+      </footer>
+      <a  href="#" class="scroll-t">
+          <i class="bx bx-chevron-up"></i>
+     </div>
+     <script src="https://unpkg.com/imask"></script>
+     <script src="js/app.js"></script>
+     <script src="js/footer.js"></script>
+     <script>
+     function loader(){
+          document.querySelector('.loader-container').classList.add('fade-out');
+     }
+     
+     function fadeOut(){
+          setInterval(loader, 3000);
+     }
+     window.onload = fadeOut;
+     
+     var element = document.getElementById('telp');
+     var maskOptions = {
+          mask: '+998-00-000-00-00',
+          lazy: false
+     } 
+
+     var mask = new IMask(element, maskOptions); 
+     </script>
+</body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Taxi</title>
+     <link rel="stylesheet" href="css/style.css">
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+     <header class="header">
+          <section class="flex">
+               <a href="index.html" class="logo">Служба Такси</a>
+               <nav class="navbar">
+                    <ul>
+                         <li><a href="index.html" class="active">Главный</a></li>
+                         <li><a href="politics.html">Политика</a></li>
+                         <li><a href="#" class="delete-account">Удалить аккаунт</a>
+                              <div class="delete-person">
+                                   <a href="delete-account.html">Удаление аккаунта клиента.</a>
+                                   <a href="delete-account-driver.html">Удаление аккаунта водитель.</a>
+                              </div>
+                         </li>
+                    </ul>
+               </nav>
+               <div id="menu" class='bx bx-menu-alt-right'></div>
+          </section>
+          <div class="sidebar">
+               <a href="index.html" class="logo">Служба Такси</a>
+               <nav class="navbar">
+                    <ul>
+                         <li><a href="index.html">Главный</a></li>
+                         <li><a href="politics.html">Политика</a></li>
+                         <li><a href="delete-account.html" class="delete-account">Удалить аккаунт</a></li>
+                    </ul>
+                    <div class="social">
+                         <a href=""><i class='bx bxl-facebook' ></i></a>
+                         <a href=""><i class='bx bxl-instagram-alt'></i></a>
+                         <a href=""><i class='bx bxl-telegram'></i></a>
+                    </div>
+               </nav>
+          </div>
+     </header>
+     <main class="home">
+          <section class="row">
+               <div class="left">
+                    <h3>Такси комфорт услуги</h3>
+                     <p>Национальная служба комфорт такси</p>
+                     <div class="button" id="sign">
+                          Оставить заявку
+                     </div>
+               </div>
+               <div class="right">
+                    <img src="img/home.png" alt="">
+               </div>
+          </section>
+     </main>
+
+     <div class="form" id="form">
+          <form action="">
+               <h3>Заполните бизнес-заявку Taxi</h3>
+               <p>Это займет не более двух минут</p>
+               <div id="close" class="bx bx-plus"></div>
+               <input type="text" class="input" placeholder="Ваше имя" id="name" required>
+               <div class="inputBX">
+                    <img src="img/uzbekistan.png" alt="">
+                    <input type="text" class="input"  required id="tel"
+                      pattern="\+\d{3}-\d{2}-\d{3}-\d{2}-\d{2}"
+                      placeholder="+998-91-044-15-41"> 
+                </div>
+                <div class="check">
+                    <h2>Тип приложения</h2>
+                     <div class="flex">
+                          <div class="box">
+                               <input type="checkbox" class="check-input" id="select" value="По балансу">
+                               На балансе
+                          </div>
+                          <div class="box">
+                               <input type="checkbox" class="check-input" id="select" value="По заказам">
+                               Согласно приказам
+                          </div>
+                          <div class="box">
+                               <input type="checkbox" class="check-input" id="select" value="Быть водителем">
+                               Быть водителем
+                          </div>
+                          <div class="box">
+                               <input type="checkbox" class="check-input" id="select" value="По программе">
+                               По программе
+                          </div>
+                          <div class="box">
+                               <input type="checkbox" class="check-input" id="select" value="Жалоба">
+                               Жалоба
+                          </div>
+                     </div>
+                </div>
+               <button class="button" style="width: 100%;" onclick="submitForm()">Отправить</button>
+          </form>
+     </div>
+
+     <main class="services">
+          <section class="row">
+               <div class="box">
+                    <i class='bx bx-wallet'></i>
+                    <h3>Ваше удобство</h3>
+                    <p>Уникальный номер счета для всех заказов</p>
+               </div>
+               <div class="box">
+                    <i class='bx bx-mobile-alt'></i>
+                    <h3>Удобство для ваших сотрудников</h3>
+                    <p>Заказ через удобное приложение</p>
+               </div>
+               <div class="box">
+                    <i class='bx bx-money-withdraw'></i>
+                    <h3>Управление</h3>
+                    <p>Получить отчет обо всех расходах</p>
+               </div>
+               <div class="box">
+                    <i class='bx bx-car' ></i>
+                    <h3>Скорость</h3>
+                    <p>Не подозревайте, что машина скоро приедет</p>
+               </div>
+          </section>
+     </main>
+
+     <main class="deal">
+          <section class="row">
+               <div class="left">
+                    <h3>Скидка 20 % на комиссию <br> за два месяца по договору</h3>
+                    <p>Попробуйте качество нашего сервиса по низкой цене</p>
+               </div>
+               <div class="right">
+                    <div class="button" id="deal">
+                         Подавать заявление
+                    </div>
+               </div>
+          </section>
+     </main>
+
+     <main class="domination" id="domination">
+          <section class="content">
+               <h1>Приоритеты такси</h1>
+          </section>
+          <section class="row">
+               <div class="box">
+                    <i class='bx bx-mobile-alt'></i>
+                    <div class="info">
+                         <h3>Удобное приложение</h3>
+                         <p>Вызов машины в несколько кликов</p>
+                    </div>
+               </div>
+               <div class="box">
+                    <i class='bx bx-globe'></i>
+                    <div class="info">
+                         <h3>Большая сеть</h3>
+                         <p>Заказы принимают более 40 000 водителей</p>
+                    </div>
+               </div>
+               <div class="box">
+                    <i class='bx bxs-star'></i>
+                    <div class="info">
+                         <h3>Отличный опыт</h3>
+                         <p>Оказываем услуги в Узбекистане уже 7 лет</p>
+                    </div>
+               </div>
+          </section>
+     </main>
+
+     <main class="howork" id="howork">
+          <section class= "content">
+               <h1> Как мы работаем </h1>
+               <p> Как только контракт будет подписан с Taxi, мы даем ваш бизнес для создания бизнес -панели. </ P>
+          </section>
+          <section class="row">
+               <div class="left-content">
+                <div class="box">
+                     <div class="left">
+                          <i class='bx bx-buildings'></i>
+                          <h3>Название компании</h3>
+                     </div>
+                </div>
+                <div class="box">
+                     <div class="left">
+                          <i class='bx bx-wallet-alt'></i>
+                          <div class="media-p">
+                               <h3>Общий баланс</h3>
+                               <p>Только видимо для администратора.</p>
+                          </div>
+                     </div>
+                </div>
+                <div class="box">
+                     <div class="left">
+                          <i class='bx bx-user'></i>
+                          <div class="media-p">
+                               <h3>Сотрудники</h3>
+                               <p class="moves-ru">Вы можете установить персонал для добавления и удаления персонала, а также ограничения на заказ такси.</p>
+                          </div>
+                     </div>
+                </div>
+                <div class="box">
+                     <div class="left">
+                          <i class='bx bx-wallet-alt'></i>
+                          <div class="media-p">
+                               <h3>Отчет</h3>
+                               <p class="move-ru">Поездка, включая информацию и указания пассажира, <br> Вся цена на поездки и время заказа.</p>
+                          </div>
+                     </div>
+                </div>
+                <div class="box">
+                     <div class="left">
+                          <i class='bx bx-wallet-alt'></i>
+                          <div class="media-p">
+                               <h3>24/7 поддержка</h3>
+                               <p>Pаботает днем ​​и ночью, отвечает на ваши вопросы и помогает вам решить возможные трудности. </p>
+                          </div>
+                     </div>
+                </div>
+               </div>
+           </section>
+     </main>
+
+     <main class="about" id="shart">
+          <section class="row">
+               <div class="left">
+                    <h3>Условия сотрудничества открыты и понятны</h3>
+                    <div class="right-none">
+                         <img src="img/about.jpg" alt="">
+                    </div>
+                    <div class="p">
+                         <p>Для подключения бизнес-сервиса «Такси» заполните заявку или напишите письмо на нашу электронную почту с информацией о вашей компании.</p>
+                         <p>Через 30 минут с вами свяжется менеджер для заключения договора.</p>
+                         <p>После заключения договора Вам будет предоставлено право управления Бизнес-панелью.</p>
+                    </div>
+                     <a href="#app"  class="button">Скачать приложение</a>
+               </div>
+               <div class="right">
+                    <img src="img/about.jpg" alt="">
+               </div>
+          </section>
+     </main>
+
+     <main class="brend">
+          <section class="content">
+               <h1>Наши клиенты</h1>
+          </section>
+          <section class="row">
+               <div class="box">
+                    <img src="img/korzinka.svg" alt="">
+               </div>
+               <div class="box">
+                    <img src="img/bi1.svg" alt="">
+               </div>
+               <div class="box">
+                    <img src="img/solo.svg" alt="">
+               </div>
+               <div class="box">
+                    <img src="img/artel.svg" alt="">
+               </div>
+               <div class="box">
+                    <img src="img/mini.svg" alt="">
+               </div>
+               <div class="box">
+                    <img src="img/makro.svg" alt="">
+               </div>
+          </section>
+     </main>
+
+     <main class="reviews" id="reviews">
+          <section class="content">
+               <h1>Клиенты о нас</h1>
+          </section>
+          <section class="row">
+               <div class="box">
+                    <p>«Я выбираю Taxi из-за безопасности, которую оно предлагает.
+                    Это очень важно для меня и помогает мне чувствовать себя комфортно".</p>
+                    <div class="bottom">
+                         <div class="left">
+                              <img src="img/ava.jpg" alt="">
+                         </div>
+                         <div class="right">
+                              <h3>Атоми Узбекистан</h3>
+                              <h4>Маркетолог</h4>
+                         </div>
+                    </div>
+               </div>
+               <div class="box">
+                    <p>«Я выбираю Taxi из-за безопасности, которую оно предлагает.
+                    Это очень важно для меня и помогает мне чувствовать себя комфортно".</p>
+                    <div class="bottom">
+                         <div class="left">
+                              <img src="img/ava.jpg" alt="">
+                         </div>
+                         <div class="right">
+                              <h3>Атоми Узбекистан</h3>
+                              <h4>Маркетолог</h4>
+                         </div>
+                    </div>
+               </div>
+               <div class="box">
+                    <p>«Я выбираю Taxi из-за безопасности, которую оно предлагает.
+                    Это очень важно для меня и помогает мне чувствовать себя комфортно".</p>
+                    <div class="bottom">
+                         <div class="left">
+                              <img src="img/ava.jpg" alt="">
+                         </div>
+                         <div class="right">
+                              <h3>Атоми Узбекистан</h3>
+                              <h4>Маркетолог</h4>
+                         </div>
+                    </div>
+               </div>
+               <div class="box">
+                    <p>«Я выбираю Taxi из-за безопасности, которую оно предлагает.
+                    Это очень важно для меня и помогает мне чувствовать себя комфортно".</p>
+                    <div class="bottom">
+                         <div class="left">
+                              <img src="img/ava.jpg" alt="">
+                         </div>
+                         <div class="right">
+                              <h3>Атоми Узбекистан</h3>
+                              <h4>Маркетолог</h4>
+                         </div>
+                    </div>
+               </div>
+          </section>
+     </main>
+     <main class="faqs" id="faqs">
+          <section class="content">
+               <h3>Ответы на вопросы</h3>
+          </section>
+          <section class="flexing">
+               <div class="wrapper">
+                    <button class="toggle">
+                         Как долго длится курс?
+                          <i class="bx bx-plus icon"></i>
+                    </button>
+                    <div class="info-s">
+                        <p>Kurs davomiyligi sizning o’qish tezligingizga bog’liq. Kun ora o’rganganda kursimiz 4 oyga mo’ljallangan.  <br> Agar xohlasangiz tezroq o’qib tugatishingiz mumkin.</p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <button class="toggle">
+                          Kurs sifatini qanday bilaman?
+                          <i class="bx bx-plus icon"></i>
+                    </button>
+                    <div class="info-s">
+                        <p>Kursimiz sifatini bemalol bepul modullar orqali tekshirishingiz yoki shunchaki sotib olishingiz mumkin. <br> Sotib olingandan keyin 2-3 kun ichida kursimiz sizga yoqmasa, pulingizni qaytarib beramiz.</p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <button class="toggle">
+                          Kurs qancha davom etadi?
+                          <i class="bx bx-plus icon"></i>
+                    </button>
+                    <div class="info-s">
+                        <p>Kurs davomiyligi sizning o’qish tezligingizga bog’liq. Kun ora o’rganganda kursimiz 4 oyga mo’ljallangan.  <br> Agar xohlasangiz tezroq o’qib tugatishingiz mumkin.</p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <button class="toggle">
+                          Kurs sifatini qanday bilaman?
+                          <i class="bx bx-plus icon"></i>
+                    </button>
+                    <div class="info-s">
+                        <p>Kursimiz sifatini bemalol bepul modullar orqali tekshirishingiz yoki shunchaki sotib olishingiz mumkin. <br> Sotib olingandan keyin 2-3 kun ichida kursimiz sizga yoqmasa, pulingizni qaytarib beramiz.</p>
+                    </div>
+                </div>
+          </section>
+      </main>
+
+      <main class="app" id="app">
+          <div class="row">
+               <div class="left">
+                    <h3>Загрузить приложение</h3>
+                    <p>1. Выберите Магазин приложений.</p></p>
+                    <p>2. Загрузите приложение на свой смартфон.</p>
+                    <p>3. Организуйте свою первую поездку.</p>
+                    <div class="button-flex">
+                         <a href=""><img src="img/appstore.svg" alt=""></a>
+                         <a href=""><img src="img/googleplay.svg" alt=""></a>
+                    </div>
+               </div>
+               <div class="right">
+                    <img src="img/app.png" alt="">
+               </div>
+          </div>
+      </main>
+
+      <main class="time">
+          <section class="content">
+                <h1>Мы всегда на связи</h1>
+                <p>Вы можете узнать информацию удобным для вас способом.</p>
+          </section>
+           <section class="row">
+                <div class="box">
+                     <h3>Адрес головного офиса</h3>
+                     <h2>Узбекистан, город Бухара</h2>
+                </div>
+                <div class="box">
+                     <h3>Рабочее время</h3>
+                     <h2>Понедельник-пятница — круглосуточно</h2>
+                     <h2>Суббота-воскресенье — 09:00-21:00</h2>
+                </div>
+                <div class="box">
+                     <h3>Телефон</h3>
+                     <a href="tel:+998 99 994-28-88">+998 99 994-28-88</a>
+                </div>
+                <div class="box">
+                     <h3>Электронная почта</h3>
+                     <a href="mailto:info@taxi.uz">info@taxi.uz</a>
+                </div>
+           </section>
+      </main>
+
+      <footer class="footer">
+          <section class="content">
+               <h1>Оставить контактную информацию</h1>
+               <p>Мы свяжемся с вами и ответим на все вопросы по услуге.</p>
+               <form class="input-flex" id="forma">
+                    <div class="input">
+                         <input type="text" placeholder="Ф.И.О" id="nick" required>
+                    </div>
+                    <div class="input">
+                         <input type="text" class="input" required id="telp"
+                      pattern="\+\d{3}-\d{2}-\d{3}-\d{2}-\d{2}"
+                      placeholder="+998-91-044-15-41"> 
+                    </div>
+                    <button class="button" onclick="submitForma()">Oтправить</button>
+               </form>
+               <div class="row">
+                    <div class="left">
+                         <a href="politika-rus.html">Политика конфиденциальности</a>
+                    </div>
+                    <div class="right">
+                         <div class="social">
+                              <a href=""><i class='bx bxl-facebook' ></i></a>
+                              <a href=""><i class='bx bxl-instagram-alt'></i></a>
+                              <a href=""><i class='bx bxl-telegram'></i></a>
+                         </div>
+                         <a href="https://teamwork.uz" target="_blank">Cоздано компанией Teamwork.uz</a>
+                    </div>
+               </div>
+          </section>
+      </footer>
+      <a  href="#" class="scroll-t">
+          <i class="bx bx-chevron-up"></i>
+     </div>
+     <script src="https://unpkg.com/imask"></script>
+     <script src="js/app.js"></script>
+     <script src="js/form.js"></script>
+     <script src="js/footer.js"></script>
+     <script>
+     function loader(){
+          document.querySelector('.loader-container').classList.add('fade-out');
+     }
+     
+     function fadeOut(){
+          setInterval(loader, 3000);
+     }
+     window.onload = fadeOut;
+     
+     var element = document.getElementById('tel');
+     var maskOptions = {
+          mask: '+998-00-000-00-00',
+          lazy: false
+     } 
+
+     var mask = new IMask(element, maskOptions); 
+     </script>
+</body>
+</html>

@@ -1,0 +1,1129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+* {
+     font-family: 'Montserrat', sans-serif;
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     outline: none;
+     border: none;
+     list-style: none;
+     text-decoration: none;
+     transition: all .2s;
+}
+
+html {
+     font-size: 60%;
+     overflow-x: hidden;
+     scroll-behavior: smooth;
+     scroll-padding-top: 6.5rem;
+}
+
+section {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 2rem;
+}
+
+*::selection {
+     background: #F2C43A;
+     color: #fff;
+}
+
+html::-webkit-scrollbar {
+     width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+     background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+     background: #F2C43A;
+}
+
+.button {
+     background: #F2C43A;
+     width: fit-content;
+     text-align: center;
+     padding: 2rem;
+     font-size: 2rem;
+     border-radius: 1.1rem;
+     color: #fff;
+     cursor: pointer;
+     font-weight: 700;
+}
+
+.header {
+     position: relative;
+     top: 0;
+     right: 0;
+     left: 0;
+     padding-top: 1rem;
+     padding-bottom: 1rem;
+}
+
+.header .flex {
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.header .flex .logo {
+     font-size: 2rem;
+     color: #1c1c1c;
+}
+
+.header .flex .logo:hover {
+     color: #F2C43A;
+}
+
+.header .flex .navbar {
+     display: flex;
+}
+
+.header .flex .navbar img {
+     display: none;
+}
+
+.header .flex .navbar ul {
+     display: flex;
+     align-items: center;
+     position: relative;
+}
+
+.header .flex .navbar ul li a {
+     font-size: 1.6rem;
+     margin-left: 2.5rem;
+     color: #333;
+}
+
+.header .flex .navbar ul li  .delete-account {
+     background: red;
+     padding: 1.5rem 2rem;
+     border-radius: 1rem;
+     color: #fff !important;
+}
+
+.header .flex .navbar ul li a:hover,
+.header .flex .navbar ul li a.active {
+     color: #F2C43A;
+}
+
+.header .flex .navbar ul .delete-person {
+     position: absolute;
+     background: red;
+     right: 0;
+     width: 17.6rem;
+     display: none;
+     border-radius: 1rem;
+}
+
+.header .flex .navbar ul .delete-person.active {
+     display: block;
+}
+
+.header .flex .navbar ul .delete-person a {
+     display: block;
+     color: #fff;
+     padding-top: 1rem;
+     margin-left: 2rem;
+     margin-bottom: 1rem;
+     font-size: 1.4rem; 
+}
+
+.header .flex .navbar ul .delete-person a:hover {
+     color: #fff;
+}
+
+.header .flex #menu {
+     font-size: 4rem;
+     display: none;
+     cursor: pointer;
+}
+
+.header .flex .bx-plus {
+     transform: rotate(135deg);
+}
+
+.header .sidebar {
+     display: none;
+}
+
+.header .sidebar .logo {
+     font-size: 2.5rem;
+     color: #1c1c1c;
+     padding-left: 2rem;
+}
+
+.header .sidebar ul {
+     flex-flow: column;
+     margin-top: 1rem;
+}
+
+.header .sidebar ul li a {
+     display: block;
+     font-size: 2rem;
+     padding: 1rem;
+     margin-left: 1rem;
+     color: #333;
+}
+
+.header .sidebar .social {
+     margin-left: 2rem;
+     display: flex;
+     align-items: center;
+     gap: 2rem;
+     margin-top: 2rem;
+}
+
+.header .sidebar .social a {
+     font-size: 2rem;
+     background: #F2C43A;
+     color: #fff;
+     padding: 1rem;
+     border-radius: 5rem;
+     display: flex;
+     align-items: center;
+}
+
+.home {
+     margin-top: 3rem;
+}
+
+.home .row {
+     display: flex;
+     gap: 2rem;
+     flex-wrap: wrap;
+}
+
+.home .row .left {
+     flex: 1 1 40rem;
+}
+
+.home .row .left  h3 {
+     font-size: 6rem;
+     font-weight: 600;
+     padding-bottom: 2rem;
+}
+
+.home .row .left p {
+     font-size: 2rem;
+     padding-bottom: 4rem;
+     color: #1c1c1c;
+}
+
+.home .row .right {
+     flex: 1 1 40rem;
+}
+
+.home .row .right img {
+     max-width: 100%;
+}
+
+.form {
+     background: #f6f6f6;
+     height: 100vh;
+     width: 100%;
+     position: fixed;
+     top: -325%;
+     bottom: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 1000;
+}
+
+.form.active {
+     top: 0;
+}
+
+.form form {
+     position: relative;
+     padding: 3rem;
+     width: fit-content;
+}
+
+.form form h3 {
+     font-size: 3rem;
+     padding-bottom: 2rem;
+}
+
+.form form p {
+     font-size: 2rem;
+     padding-bottom: 3rem;
+     color: #1c1c1c;
+}
+
+.form form #close {
+     transform: rotate(135deg);
+     font-size: 4rem;
+     float: right;  
+     position: absolute;
+     margin-top: -3rem;
+     right: 0;
+     top: 0;
+     margin-right: 2rem;
+     cursor: pointer;
+}
+
+.form form .check h2 {
+     font-size: 2.5rem;
+     padding-bottom: 1rem;
+}
+
+.form form .check .flex {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1rem;
+     margin-bottom: 2rem;
+}
+
+.form form .check .box {
+     display: flex;
+     flex: 1 1 30rem;
+     gap: 1rem;
+     font-size: 1.6rem;
+     padding-bottom: 2rem;
+     margin-top: 1rem;
+}
+
+.form form .check .box .check-input {
+     width: 2rem;
+}
+
+.form form .input {
+     padding: 1.5rem 3rem;
+     display: block;
+     width: 100%;
+     margin-bottom: 2rem;
+     background: transparent;
+     border: 0.2rem solid #333;
+     border-radius: 1rem;
+}
+
+.form form #tel {
+     padding-left: 5rem;
+}
+
+.form form .inputBX {
+     display: flex;
+}
+
+.form form img {
+     width: 2.5rem;
+     height: 2.5rem;
+     position: absolute;
+     margin-top: 1.3rem;
+     margin-left: 1.5rem;
+}
+
+.loader-container {
+     position: fixed;
+     top:0; left:0;
+     height:100%; 
+     width:100%;
+     z-index: 10000;
+     background: #fff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+ }
+ 
+ .loader-container img{
+     width: 20rem;
+ }
+ 
+ .loader-container.fade-out{
+     top:-110%;
+     opacity:0;
+ }
+
+.services .row {
+     display: flex;
+     gap: 2rem;
+     flex-wrap: wrap;
+     justify-content: space-between;
+}
+
+.services .row .box {
+     background: #f6f6f6;
+     padding: 3rem;
+     flex: 1 1 20rem;
+     border-radius: 2rem;
+}
+
+.services .row .box i {
+     color: #F2C43A;
+     font-size: 5rem;
+     padding-bottom: 1.5rem;
+}
+
+.services .row .box h3 {
+     font-size: 2.3rem;
+     padding-bottom: 1rem;
+}
+
+.services .row .box p {
+     font-size: 2rem;
+     color: #1c1c1c;
+}
+
+.deal {
+     margin-top: 3rem;
+}
+
+.deal .row {
+     background: #f6f6f6;
+     max-width: 1150px;
+     border-radius: 2rem;
+     display: flex;
+     padding: 4rem;
+     gap: 4rem;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     height: fit-content;
+}
+
+.deal .row .left h3 {
+     font-size: 2.8rem;
+     padding-bottom: 2rem;
+}
+
+.deal .row .left p {
+     font-size: 2rem;
+     color: #1c1c1c;
+}
+
+.domination {
+     background: #f6f6f6;
+     margin-top: 5rem;
+     padding-top: 5rem;
+     padding-bottom: 5rem;
+}
+
+.domination .content h1 {
+     font-size: 4rem;
+}
+
+.domination .row {
+     display: flex;
+     gap: 3rem;
+     flex-wrap: wrap;
+     margin-top: 2rem;
+     justify-content: space-between;
+}
+
+.domination .row .box i {
+     font-size: 4rem;
+     color: #F2C43A;
+     padding-bottom: 1.5rem;
+}
+
+.domination .row .box h3 {
+     font-size: 2.4rem;
+     padding-bottom: 1.5rem;
+}
+
+.domination .row .box p {
+     font-size: 2rem;
+     width: 25rem;
+     color: #1c1c1c;
+}
+
+.howork {
+     background: #f8f8f8;
+     padding-top: 5rem;
+     padding-bottom: 5rem;
+     text-align: center;
+}
+
+.howork .row .button {
+     margin-top: 3rem;
+     width: 100%;
+}
+
+.howork .content {
+     text-align: left;
+}
+
+.howork .content h1 {
+     font-size: 4rem;
+     padding-bottom: 1.5rem;
+}
+
+.howork .content p {
+     font-size: 2rem;  
+}
+
+.howork .contents p {
+     display: none;
+     font-size: 2rem;
+     color: #1c1c1c;
+}
+
+.howork .row {
+     text-align: left;
+     display: flex;
+     align-items: center;
+}
+
+.howork .row .box {
+     margin-bottom: 3rem;
+     border-bottom: .2rem dashed #333;
+     padding-bottom: 3rem;
+}
+
+.howork .row .box .left {
+     display: flex;
+     align-items: center;
+     gap: 2rem;
+}
+
+.howork .row .box .left h3 {
+     font-size: 2rem;
+     padding-bottom: 0.5rem;
+}
+
+.howork .row .box .left p {
+     font-size: 1.7rem;
+}
+
+.howork .row .box .left i {
+     border: .2rem solid #F2C43A;
+     padding: 1.5rem;
+     border-radius: 5rem;
+     height: fit-content;
+     font-size: 2rem;
+     color: #F2C43A;
+}
+
+.howork .row .box .left .media-p {
+     display: flex;
+     align-items: center;
+     gap: 5rem;
+}
+
+.howork .row .box .left .media-p .moves {
+     margin-left: 7rem;
+}
+
+.howork .row .box .left .media-p .move {
+     margin-left: 8.5rem;
+}
+
+.howork .row .box .left .media-p .moves-ru {
+     margin-left: 3rem;
+}
+
+.howork .row .box .left .media-p .move-ru {
+     margin-left: 10rem;
+}
+
+.about {
+     background: #f8f8f8;
+}
+
+.about .row {
+     display: flex;
+     gap: 3rem;
+     flex-wrap: wrap;
+}
+
+.about .row .left {
+     flex: 1 1 40rem;
+}
+
+.about .row .left h3 {
+     font-size: 4rem;
+     padding-bottom: 2rem;
+}
+
+.about .row .left .p p {
+     font-size: 2rem;
+     padding-top: 2rem;
+     color: #1c1c1c;
+}
+
+.about .row .left .p  {
+     margin-bottom: 5rem;
+}
+
+.about .row .right {
+     flex: 1 1 40rem;
+}
+
+.about .row .right img,
+.about .row .right-none img {
+     border-radius: 1.6rem;
+     max-width: 100%;
+} 
+
+.about .row .right-none {
+     display: none;
+}
+
+.brend {
+     background: #f6f6f6;
+     padding-top: 5rem;
+}
+
+.brend .content h1 {
+     font-size: 4rem;
+}
+
+.brend .row {
+     display: flex;
+     gap: 2rem;
+     align-items: center;
+     flex-wrap: wrap;
+     justify-content: space-between;
+}
+
+.scroll-t {
+     position: fixed;
+     bottom: 7.5rem;
+     right: 2rem;
+     z-index: 1000;
+     background: #F2C43A;
+     padding: 1.5rem 1.5rem;
+     border-radius: 50%;
+     cursor: pointer;
+ }
+ 
+ .scroll-t i {
+     font-size: 2.5rem;
+     color: #fff;
+ }
+ 
+ .scroll-t:hover {
+     -webkit-animation: 1s tada ease-in-out alternate;
+     animation: 1s tada ease-in-out alternate;
+ }
+
+.reviews {
+     padding-top: 5rem;
+}
+
+.reviews .content h1 {
+     font-size: 4rem;
+}
+
+.reviews .row {
+     display: flex;
+     gap: 2rem;
+     flex-wrap: wrap;
+}
+
+.reviews .row .box {
+     padding: 0 5rem;
+     border: .2rem solid #f6f6f6;
+     box-shadow:  0 0 .1rem #333;
+     border-radius: 1.5rem;
+     flex: 1 1 40rem;
+}
+
+.reviews .row .box p {
+     padding-top: 3rem;
+     font-size: 1.9rem;
+     color: #1c1c1c;
+}
+
+.reviews .row .box .bottom {
+     display: flex;
+     align-items: center;
+     gap: 2rem;
+     padding-top: 10rem;
+     padding-bottom: 3rem;
+}
+
+.reviews .row .box .bottom img {
+     width: 5rem;
+     border-radius: 5rem;
+}
+
+.reviews .row .box h4 {
+     font-size: 1.8rem;
+     font-weight: 400;
+}
+
+.reviews .row .box h3 {
+     font-size: 2rem;
+     padding-bottom: 0.5rem;
+}
+
+.faqs {
+     margin-top: 5rem;
+     padding-top: 5rem;
+     padding-bottom: 5rem;
+     background: #f3f3f3;
+}
+
+.faqs  h3 {
+     font-size: 4rem;
+}
+
+.faqs .flexing {
+     display: flex;
+     gap: 2rem;
+     flex-wrap: wrap;
+}
+
+.faqs .wrapper  {
+     flex:  1 1 40rem;
+     background: #fff;
+     padding: 3rem;
+     border-radius: 1.5rem;
+}
+
+.faqs .wrapper .toggle {
+     width: 100%;
+     background-color: transparent;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     font-size: 2rem;
+     color: #333;
+     font-weight: 500;
+     border: none;
+     outline: none;
+     text-align: left;
+     cursor: pointer;
+ }
+
+ .faqs .wrapper .icon {
+     padding: 1.5rem;
+     color: #333;
+     border-radius: 5rem;
+     font-size: 3rem;
+ }
+
+ .faqs .wrapper .info-s {
+     position: relative;
+     font-size: 1.8rem;
+     padding-top: 1rem;
+     text-align: justify;
+     line-height: 3rem;
+     height: 0;
+     color: #1c1c1c;
+     overflow: hidden;
+     transition: all 1s;
+ }
+
+ .app {
+     margin-top: 5rem;
+ }
+
+ .app .row {
+     display: flex;
+     justify-content: space-between;
+     gap: 2rem;
+     max-width: 1150px;
+     padding-top: 2rem;
+     margin: 0 auto;
+     flex-wrap: wrap;
+     border: .2rem solid #f6f6f6;
+     border-radius: 2rem;
+ }
+
+ .app .row .left {
+     padding: 5rem;
+ }
+
+ .app .row .left h3 {
+     font-size: 4rem;
+     padding-bottom: 2rem;
+ }
+
+ .app .row .left  p  {
+     font-size: 2rem;
+     padding-bottom: 1.5rem;
+ }
+
+ .app .row .left .button-flex {
+     display: flex;
+     gap: 2rem;
+     margin-top: 3rem;
+ }
+
+ .app .row .left .button-flex img {
+     border-radius: 1rem;
+     width: 20rem;
+ }
+
+ .app .row .left .button-flex img:hover {
+     transform: translateY(-1rem)
+ }
+
+ .app .row .right img {
+     max-width: 100%;
+     width: 35rem;
+ }
+
+ .time {
+     margin-top: 5rem;
+ }
+
+ .time .content h1 {
+     font-size: 4rem;
+     padding-bottom: 1rem;
+ }
+
+ .time .content p {
+     font-size: 2rem;
+ }
+
+ .time .row {
+     display: flex;
+     gap: 2rem;
+     flex-wrap: wrap;
+     justify-content: space-between;
+ }
+
+ .time .row .box h3 { 
+     font-size: 2.5rem;
+     color: #333;
+     opacity: .9;
+     padding-bottom: 1rem;
+ }
+
+ .time .row .box h2,
+ .time .row .box a {
+     font-size: 1.9rem;
+     padding-bottom: 1rem;
+     font-weight: 500;
+     color: #333;
+ }
+
+ .time .row .box a:hover {
+     color: #F2C43A;
+ }
+
+.politika {
+     background: url(../img/truck-bg.png);
+     background-size: cover;
+     background-position: center;
+     min-height: 50vh;
+     padding-top: 5rem;
+}
+
+.politika .content  {
+     color: #fff;
+}
+
+.politika .content h3 {
+     font-size: 3rem;
+     padding-bottom: 2rem;
+}
+
+.politika .content p {
+     font-size: 1.7rem;
+     line-height: 2.8rem;
+}
+
+.politika .content a {
+     font-size: 1.5rem;
+     color: #fff;
+     text-decoration: underline;
+}
+
+.politika .content a:hover {
+     color: #F2C43A;
+}
+
+.footer {
+     background: #f8f8f8;
+     margin-top: 10rem;
+     padding-top: 5rem;
+ }
+
+ .footer .content {
+     padding-top: 5rem;
+ }
+
+ .footer .content h1 {
+     font-size: 4rem;
+     padding-bottom: 2rem;
+ }
+
+ .footer .content p {
+     font-size: 2rem;
+     padding-bottom: 2rem;
+ }
+
+ .footer .content .input-flex {
+     display: flex;
+     gap: 2rem;
+ }
+
+ .footer .content .input-flex input {
+     padding: 2rem 3rem;
+     border-radius: 1rem;
+     flex: 1 1 20rem;
+     width: 45rem;
+     font-size: 1.6rem;
+     border: .2rem solid #f6f6f6;
+     box-shadow: 0 0 .1rem #474747;
+ }
+
+ .footer .content .input-flex button {
+     width: 100%;
+ }
+
+ .footer .row {
+     display: flex;
+     gap: 2rem;
+     justify-content: space-between;
+     padding-top: 5rem;
+     margin-top: 5rem;
+     padding-bottom: 4rem;
+     flex-wrap: wrap;
+     border-top: .2rem solid #333;
+ }
+
+ .footer .row .left {
+     flex: 1 1 40rem;
+ }
+
+ .footer .row .left a {
+     font-size: 2rem;
+     color: #000;
+     text-decoration: underline;
+ }
+
+ .footer .row .left a:hover {
+     color: #F2C43A;
+ }
+
+ .footer .row .right a {
+     font-size: 2rem;
+     color: #000;
+ }
+
+ .footer .row .right a:hover {
+     color: #F2C43A;
+ }
+
+ .footer .row .right .social {
+     display: flex;
+     align-items: center;
+     gap: 2rem;
+     margin-top: 2rem;
+     margin-bottom: 2rem;
+}
+     
+.footer .row .right .social a {
+     font-size: 2rem;
+     background: transparent;
+     border: .1rem solid #F2C43A;
+     color: #F2C43A;
+     padding: 1rem;
+     border-radius: 5rem;
+     display: flex;
+     align-items: center;
+ }  
+
+ .footer .row .right .social a:hover {
+     border: .1rem solid #F2C43A;
+     background: #F2C43A;
+     color: #fff;
+ }
+
+ .delete-account .content {
+     border: .2rem solid #f3f3f3;
+     border-radius: 2rem;
+     padding: 2rem;
+ }
+ 
+ .delete-account .content img {
+     width: 80rem;
+     max-width: 100%;
+ }
+
+ .delete-account .content h3 {
+     font-size: 3rem;
+     padding-bottom: 2rem;
+ }
+
+ .delete-account .content p {
+     font-size: 1.7rem;
+     padding-bottom: 2rem;
+ }
+@media (max-width: 1144px){
+     html {
+          font-size: 55%;
+     }
+
+     .header .flex .logo img {
+          width: 20rem;
+     }
+
+     .header .flex .navbar {
+          display: none;
+     }
+
+     .header .flex #menu {
+          display: block;
+          z-index: 1000;
+     }
+
+     .header .sidebar {
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          display: block;
+          transform: translateX(-100%);
+          background: #f6f6f6;
+          width: 100%;
+          height: 100vh;
+          z-index: 100;
+          padding-top: 3rem;
+     }
+
+     .header .sidebar img {
+          display: block;
+          padding-left: 2rem;
+          width: 23rem;
+     }
+
+     .header .sidebar.active {
+          transform: translateX(0%);
+     }
+}
+
+@media (max-width: 991px){
+     .footer .content .input-flex {
+          display: block;
+     }
+
+     .footer .content .input-flex input {
+          margin-bottom: 2rem;
+          width: 100%;
+     }
+}
+
+@media (max-width: 770px){
+     .header .flex .details .client {
+          display: none;
+     }
+
+     .header .sidebar .client-med {
+          display: block;
+     }
+}
+
+@media (max-width: 480px){
+     html {
+          font-size: 52%;
+     }
+     .form form input {
+          min-width: fit-content;
+     }
+
+     .form form h3 {
+          padding-top: 3rem;
+     }
+
+     .app .row {
+          justify-content: center;
+     }
+
+     .services .row {
+          display: block;
+     }
+
+     .services .row .box {
+          margin-bottom: 2rem;
+     }
+
+     .domination,
+     .howork {
+          margin-top: 0;
+          padding-top: 0;
+     }
+
+     .domination .row .box {
+          display: flex;
+          gap: 2rem;
+     }
+
+     .home .row .left h3 {
+          font-size: 3.5rem;
+     }
+
+     .home .row .left p {
+          padding-bottom: 2rem;
+     }
+
+     .about .row .right {
+          display: none;
+     }
+
+     .about .row .right-none {
+          display: block;
+     }
+
+     .brend .row .box img {
+          width: 10rem;
+     }
+
+     .reviews .row .box {
+          padding: 2rem;
+     }
+
+     .reviews .row .box .bottom {
+          padding-top: 3rem;
+     }
+
+     .howork .row .box .contents h3 {
+          padding-bottom: 1rem;
+     }
+
+     .app .row {
+          border: none;
+          padding-top: 0;
+     }
+
+     .app .row .left {
+          padding: 1.5rem;
+     }
+
+     .app .row .left .button-flex img {
+          max-width: 100%;
+          text-align: center;
+     }
+
+     .footer {
+          padding-top: 0;
+     }
+
+     .app .row {
+          gap: 0;
+     }
+
+     .deal {
+          margin: 2rem;
+     }
+
+     .domination {
+          margin-top: 5rem;
+     }
+
+     .form form #close {
+          margin-top: 0;
+     }
+
+     .howork .row .box .left .media-p {
+          display: block;
+     }
+
+     .howork .row .box .left .media-p .move,
+     .howork .row .box .left .media-p .moves,
+     .howork .row .box .left .media-p .moves-ru,
+     .howork .row .box .left .media-p .move-ru {
+          margin-left: 0;
+     }
+}
